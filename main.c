@@ -11,15 +11,14 @@ int Ex_command_mode(char **lines, int *x, int *y,char *filename,char **vimrcset,
 int All_Func(char **lines, int *x, int *y,int *status,char *filename,char**	vimrcset);  //Function about VIM EDITOR's Mechanism
  
 int main(int argc,char *argv[]) {
-    char *filename = argv[1]; //argv[1] : edit filename
-	int i,j; 
-	
+    	char *filename = argv[1]; //argv[1] : edit filename
+ 	int i,j; 
+
 	char d=1; //d : read char in file
 	char c=0; // c : read comand
-	
 	int x = 0; // x : x line
 	int y = 0; // y : y line
-    
+
 	FILE* file1; //text file 
 	FILE* vimrc; //vimrc file
 
@@ -35,22 +34,24 @@ int main(int argc,char *argv[]) {
 		defined SAVE ---> if command is 'w', status is SAVE
 		defined SAEX ---> if command is 'wq', status is SAEX
 	  */
+
 	int save = 1; 
 	/*
-     * initializing editor start 
-     */
-    char **lines = (char **)malloc(sizeof(char*)*300); //text file allocate 
+	 * initializing editor start 
+    	 */
+    	char **lines = (char **)malloc(sizeof(char*)*300); //text file allocate 
 	char **vimset =(char **)malloc(sizeof(char*)*300); //vimrc memory allocate
-    for ( i = 0 ; i < 300; i++ ) {
-        *(lines+i) = (char*)malloc(sizeof(char)*888);
-        for ( j = 0 ; j < 888 ; j++ ) {
+    	for ( i = 0 ; i < 300; i++ ) {
+        	*(lines+i) = (char*)malloc(sizeof(char)*888);
+        	for ( j = 0 ; j < 888 ; j++ ) {
 			*(*(lines+i)+j) = '\0'; 
 		}
-    }
+    	}
 	for( i=0;i <300;i++){
 		*(vimset+i) = (char*)malloc(sizeof(char)*300);
-		for(j=0;j<300;j++)
+		for(j=0;j<300;j++){
 			vimset[i][j] = '\0';
+		}
 	}
 
 	/*
@@ -59,13 +60,12 @@ int main(int argc,char *argv[]) {
      
 	if(argc == 2){
 		file1 = fopen(filename,"r");
-
-	if(file1 == 0){
+		if(file1 == 0){
 			file1 = fopen(filename, "w");
 		}
 	}
 	else{
-		printf("error\n");
+		printf("Usage\n./myvi test.txt\n");
 		return 0;
 	}
 	

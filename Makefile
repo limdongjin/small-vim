@@ -1,4 +1,4 @@
 all:
-	g++ main.c -o vi
+	g++ main.c -o myvi
 clean:
-	rm vi
+	rm myvi
