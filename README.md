@@ -1,6 +1,6 @@
 # About  
 
-This project was a project that was implemented as a class project in 2016 and is a project to implement a VIM editor that runs in a Linux environment using C language.
+This project was a project that was implemented as a class personal project in 2016 and is a project to implement a VIM editor that runs in a Linux environment using C language.
 
 The requirements were as follows.
 1. Basic functions of vim editor
