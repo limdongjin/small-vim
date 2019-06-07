@@ -1,15 +1,14 @@
-# About  
+# Small Vim
 
-This project was a project that was implemented as a class personal project in 2016 and is a project to implement a VIM editor that runs in a Linux environment using C language.
+VIM editor Project.
 
-The requirements were as follows.
-1. Basic functions of vim editor
-     1) Edit mode (the result should be accurate even if any input is received, and no segmentation error should occur)
-        2) command mode (i, ESC, dd, d, h,
-        3) ex command mode (: w,: q,: wq,: set nu,: $ line_num, / $ pattern)
-        4) .vimrc
-        5) Switch to vim mode
+for C programming(CSE2035) 2016 Fall, Sogang Univ.
 
-2. The size of the editor is limited to the size of 80X24, and you should show the border of the editor according to this size
+## Functions
 
-3. It is forbidden to declare arrays with static allocation. Only dynamic allocation was allowed.
+* Basic functions of vim editor
+	* Edit mode
+	* Indirect Addressing Mode
+	* command mode (i, ESC, dd, d, h)
+	* ex-command mode (: w,: q,: wq,: set nu,: $ line_num, / $ pattern)
+	* customizing for .vimrc
